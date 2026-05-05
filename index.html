@@ -20,11 +20,11 @@
             --bg2: #111113;
             --bg3: #1a1a1e;
             --border: #2a2a30;
-            --accent: #00cccc;
-            --accent2: #003366;
+            --accent: #8a2be2;
+            --accent2: #4b0082;
             --text: #e8e8f0;
             --muted: #6b6b80;
-            --green: #00ffff;
+            --green: #00ff7f;
             --font: 'Syne', sans-serif;
             --mono: 'DM Mono', monospace;
         }
@@ -45,7 +45,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at 25% 25%, rgba(0, 51, 102, 0.02) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(0, 204, 204, 0.01) 0%, transparent 50%);
+            background: radial-gradient(circle at 25% 25%, rgba(138, 43, 226, 0.05) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(75, 0, 130, 0.03) 0%, transparent 50%);
             pointer-events: none;
             z-index: -1
         }
@@ -58,13 +58,13 @@
 
         /* NAV */
         nav {
-            border-bottom: 1px solid rgba(0, 204, 204, 0.3);
+            border-bottom: 1px solid rgba(138, 43, 226, 0.3);
             position: sticky;
             top: 0;
-            background: linear-gradient(135deg, rgba(10, 10, 11, 0.95) 0%, rgba(0, 51, 102, 0.2) 50%, rgba(0, 204, 204, 0.1) 100%);
+            background: linear-gradient(135deg, rgba(10, 10, 11, 0.95) 0%, rgba(75, 0, 130, 0.2) 50%, rgba(138, 43, 226, 0.1) 100%);
             backdrop-filter: blur(20px);
             z-index: 100;
-            box-shadow: 0 4px 20px rgba(0, 51, 102, 0.2)
+            box-shadow: 0 4px 20px rgba(75, 0, 130, 0.2)
         }
 
         .nav-inner {
@@ -112,8 +112,8 @@
             padding: 10px 16px;
             border-radius: 8px;
             position: relative;
-            background: linear-gradient(135deg, rgba(0, 204, 204, 0.05), rgba(0, 51, 102, 0.03));
-            border: 1px solid rgba(0, 204, 204, 0.2);
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.05), rgba(75, 0, 130, 0.03));
+            border: 1px solid rgba(138, 43, 226, 0.2);
             backdrop-filter: blur(10px)
         }
 
@@ -191,14 +191,15 @@
     height: clamp(200px, 50vw, 500px);
     border-radius: 50%; /* makes it round */
     object-fit: cover;
-    box-shadow: 0 0 25px rgba(0, 204, 204, 0.5);
-    transition: transform 0.3s ease;
+    box-shadow: 0 0 25px rgba(138, 43, 226, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 4px solid var(--accent);
 }
 
 /* Hover effect */
 .profile-img img:hover {
     transform: scale(1.08);
-    box-shadow: 0 0 40px rgba(0, 204, 204, 0.7);
+    box-shadow: 0 0 40px rgba(138, 43, 226, 0.7), 0 0 60px rgba(138, 43, 226, 0.3);
 }
 
         /* HERO */
@@ -373,19 +374,19 @@
             justify-content: center;
             font-weight: 600;
             text-shadow: 0 0 15px rgba(0, 204, 204, 0.4);
-            background: linear-gradient(135deg, rgba(0, 204, 204, 0.1) 0%, rgba(0, 51, 102, 0.05) 100%);
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.1) 0%, rgba(75, 0, 130, 0.05) 100%);
             padding: 12px 24px;
             border-radius: 25px;
-            border: 1px solid rgba(0, 204, 204, 0.3);
+            border: 1px solid rgba(138, 43, 226, 0.3);
             backdrop-filter: blur(10px);
-            box-shadow: 0 4px 20px rgba(0, 204, 204, 0.2)
+            box-shadow: 0 4px 20px rgba(138, 43, 226, 0.2)
         }
 
         .section-label::before {
             content: '';
             flex: 1;
             height: 2px;
-            background: linear-gradient(90deg, transparent, rgba(0, 204, 204, 0.6), transparent);
+            background: linear-gradient(90deg, transparent, rgba(138, 43, 226, 0.6), transparent);
             border-radius: 1px;
             margin-right: 16px
         }
@@ -394,7 +395,7 @@
             content: '';
             flex: 1;
             height: 2px;
-            background: linear-gradient(90deg, transparent, rgba(0, 204, 204, 0.6), transparent);
+            background: linear-gradient(90deg, transparent, rgba(138, 43, 226, 0.6), transparent);
             border-radius: 1px;
             margin-left: 16px
         }
@@ -424,13 +425,13 @@
         }
 
         .skill-chip {
-            background: linear-gradient(135deg, var(--bg3), rgba(0, 51, 102, 0.1));
-            border: 1px solid rgba(0, 204, 204, 0.2);
+            background: linear-gradient(135deg, var(--bg3), rgba(75, 0, 130, 0.1));
+            border: 1px solid rgba(138, 43, 226, 0.2);
             border-radius: 12px;
             padding: 10px 16px;
             font-size: 0.78rem;
             font-family: var(--mono);
-            color: var(--muted);
+            color: var(--text);
             transition: all 0.3s ease;
             cursor: default;
             position: relative;
@@ -444,12 +445,12 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(0, 204, 204, 0.1), transparent);
+            background: linear-gradient(90deg, transparent, rgba(138, 43, 226, 0.1), transparent);
             transition: left 0.5s
         }
 
         .skill-chip:hover {
-            border-color: rgba(0, 204, 204, 0.5);
+            border-color: rgba(138, 43, 226, 0.5);
             color: var(--accent);
             transform: translateY(-3px) scale(1.05);
             box-shadow: 0 6px 20px rgba(0, 204, 204, 0.2)
@@ -460,14 +461,14 @@
         }
 
         .skill-chip.hot {
-            border-color: rgba(0, 204, 204, 0.4);
+            border-color: rgba(138, 43, 226, 0.4);
             color: var(--accent);
-            background: linear-gradient(135deg, rgba(0, 204, 204, 0.1), rgba(0, 51, 102, 0.05));
-            box-shadow: 0 4px 15px rgba(0, 204, 204, 0.15)
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(75, 0, 130, 0.05));
+            box-shadow: 0 4px 15px rgba(138, 43, 226, 0.15)
         }
 
         .skill-chip.hot::before {
-            background: linear-gradient(90deg, transparent, rgba(0, 204, 204, 0.2), transparent)
+            background: linear-gradient(90deg, transparent, rgba(138, 43, 226, 0.2), transparent)
         }
 
         /* PROJECTS */
@@ -482,7 +483,7 @@
 
         .project-card {
             background: linear-gradient(135deg, var(--bg2), rgba(0, 51, 102, 0.05));
-            border: 1px solid var(--border);
+            border: 1px solid rgba(138, 43, 226, 0.2);
             border-radius: 16px;
             padding: 1.5rem;
             cursor: pointer;
@@ -513,15 +514,15 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, rgba(0, 204, 204, 0.05), rgba(0, 51, 102, 0.03));
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.05), rgba(75, 0, 130, 0.03));
             opacity: 0;
             transition: opacity 0.4s ease
         }
 
         .project-card:hover {
-            border-color: rgba(0, 204, 204, 0.4);
+            border-color: rgba(138, 43, 226, 0.4);
             transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 12px 40px rgba(0, 204, 204, 0.2)
+            box-shadow: 0 12px 40px rgba(138, 43, 226, 0.2)
         }
 
         .project-card:hover::before {
@@ -581,16 +582,16 @@
         .proj-tag {
             font-size: 0.68rem;
             font-family: var(--mono);
-            background: linear-gradient(135deg, var(--bg3), rgba(0, 51, 102, 0.1));
-            border: 1px solid rgba(0, 204, 204, 0.2);
+            background: linear-gradient(135deg, var(--bg3), rgba(75, 0, 130, 0.1));
+            border: 1px solid rgba(138, 43, 226, 0.2);
             border-radius: 6px;
             padding: 4px 10px;
-            color: var(--muted);
+            color: var(--text);
             transition: all 0.3s
         }
 
         .project-card:hover .proj-tag {
-            border-color: rgba(0, 204, 204, 0.4);
+            border-color: rgba(138, 43, 226, 0.4);
             color: var(--accent)
         }
 
@@ -605,18 +606,18 @@
             font-family: var(--mono);
             color: var(--accent);
             text-decoration: none;
-            border: 1px solid rgba(0, 204, 204, 0.3);
+            border: 1px solid rgba(138, 43, 226, 0.3);
             border-radius: 8px;
             padding: 6px 12px;
             transition: all 0.3s ease;
-            background: linear-gradient(135deg, rgba(0, 204, 204, 0.05), rgba(0, 51, 102, 0.02))
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.05), rgba(75, 0, 130, 0.02))
         }
 
         .proj-link:hover {
             background: linear-gradient(135deg, var(--accent), var(--accent2));
             color: #0a0a0b;
             transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0, 204, 204, 0.3)
+            box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3)
         }
 
         /* EDUCATION */
@@ -626,8 +627,8 @@
         }
 
         .edu-card {
-            background: linear-gradient(135deg, var(--bg2), rgba(0, 51, 102, 0.05));
-            border: 1px solid rgba(0, 204, 204, 0.2);
+            background: linear-gradient(135deg, var(--bg2), rgba(75, 0, 130, 0.05));
+            border: 1px solid rgba(138, 43, 226, 0.2);
             border-radius: 16px;
             padding: 1.5rem;
             transition: all 0.4s ease;
@@ -644,15 +645,15 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, rgba(0, 204, 204, 0.03), rgba(0, 51, 102, 0.02));
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.03), rgba(75, 0, 130, 0.02));
             opacity: 0;
             transition: opacity 0.4s ease
         }
 
         .edu-card:hover {
-            border-color: rgba(0, 204, 204, 0.4);
+            border-color: rgba(138, 43, 226, 0.4);
             transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 8px 30px rgba(0, 204, 204, 0.15)
+            box-shadow: 0 8px 30px rgba(138, 43, 226, 0.15)
         }
 
         .edu-card:hover::before {
@@ -682,7 +683,7 @@
 
         .edu-meta {
             font-size: 0.78rem;
-            color: var(--muted);
+            color: var(--text);
             font-family: var(--mono);
             transition: color 0.3s
         }
@@ -706,8 +707,8 @@
 
         /* CONTACT */
         .contact-block {
-            background: linear-gradient(135deg, var(--bg3), rgba(0, 51, 102, 0.1));
-            border: 1px solid rgba(0, 204, 204, 0.2);
+            background: linear-gradient(135deg, var(--bg3), rgba(75, 0, 130, 0.1));
+            border: 1px solid rgba(138, 43, 226, 0.2);
             border-radius: 20px;
             padding: 3rem;
             display: flex;
@@ -715,7 +716,7 @@
             align-items: center;
             gap: 1.5rem;
             text-align: center;
-            box-shadow: 0 8px 30px rgba(0, 204, 204, 0.1);
+            box-shadow: 0 8px 30px rgba(138, 43, 226, 0.1);
             position: relative;
             overflow: hidden
         }
@@ -727,7 +728,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at 20% 30%, rgba(0, 204, 204, 0.05) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(0, 51, 102, 0.03) 0%, transparent 50%);
+            background: radial-gradient(circle at 20% 30%, rgba(138, 43, 226, 0.05) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(75, 0, 130, 0.03) 0%, transparent 50%);
             pointer-events: none
         }
 
@@ -766,9 +767,9 @@
             gap: 8px;
             font-size: 0.78rem;
             font-family: var(--mono);
-            color: var(--muted);
-            background: linear-gradient(135deg, var(--bg2), rgba(0, 51, 102, 0.05));
-            border: 1px solid rgba(0, 204, 204, 0.2);
+            color: var(--text);
+            background: linear-gradient(135deg, var(--bg2), rgba(75, 0, 130, 0.05));
+            border: 1px solid rgba(138, 43, 226, 0.2);
             border-radius: 12px;
             padding: 10px 18px;
             cursor: pointer;
@@ -785,15 +786,15 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(0, 204, 204, 0.1), transparent);
+            background: linear-gradient(90deg, transparent, rgba(138, 43, 226, 0.1), transparent);
             transition: left 0.5s
         }
 
         .social-btn:hover {
             color: var(--accent);
-            border-color: rgba(0, 204, 204, 0.4);
+            border-color: rgba(138, 43, 226, 0.4);
             transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 6px 20px rgba(0, 204, 204, 0.2)
+            box-shadow: 0 6px 20px rgba(138, 43, 226, 0.2)
         }
 
         .social-btn:hover::before {
@@ -832,12 +833,12 @@
                 top: 100%;
                 left: 0;
                 right: 0;
-                background: linear-gradient(135deg, rgba(10, 10, 11, 0.95) 0%, rgba(0, 51, 102, 0.2) 50%, rgba(0, 204, 204, 0.1) 100%);
+                background: linear-gradient(135deg, rgba(10, 10, 11, 0.95) 0%, rgba(75, 0, 130, 0.2) 50%, rgba(138, 43, 226, 0.1) 100%);
                 backdrop-filter: blur(20px);
                 flex-direction: column;
                 gap: 1rem;
                 padding: 1rem;
-                border-bottom: 1px solid rgba(0, 204, 204, 0.3);
+                border-bottom: 1px solid rgba(138, 43, 226, 0.3);
                 display: none;
                 z-index: 10;
             }
@@ -975,15 +976,15 @@
             <div class="skills-group">
                 <div class="skills-group-title">Programming Languages</div>
                 <div class="skills-grid">
-                    <div class="skill-chip hot">Python</div>
-                    <div class="skill-chip hot">JavaScript</div>
+                    <div class="skill-chip hot">🐍 Python</div>
+                    <div class="skill-chip hot">⚡ JavaScript</div>
                 </div>
             </div>
             <div class="skills-group">
                 <div class="skills-group-title">Web Technologies</div>
                 <div class="skills-grid">
-                    <div class="skill-chip hot">HTML5</div>
-                    <div class="skill-chip hot">CSS3</div>
+                    <div class="skill-chip hot">🏗️ HTML5</div>
+                    <div class="skill-chip hot">🎨 CSS3</div>
 
 
                 </div>
@@ -991,22 +992,22 @@
             <div class="skills-group">
                 <div class="skills-group-title">Database &amp; Tools</div>
                 <div class="skills-grid">
-                    <div class="skill-chip">MySQL</div>
-                    <div class="skill-chip">CRUD Operations</div>
-                    <div class="skill-chip">Schema Design</div>
-                    <div class="skill-chip">MS Excel</div>
-                    <div class="skill-chip">MS Word</div>
-                    <div class="skill-chip">PowerPoint</div>
+                    <div class="skill-chip">🗄️ MySQL</div>
+                    <div class="skill-chip">🔄 CRUD Operations</div>
+                    <div class="skill-chip">📐 Schema Design</div>
+                    <div class="skill-chip">📊 MS Excel</div>
+                    <div class="skill-chip">📝 MS Word</div>
+                    <div class="skill-chip">📊 PowerPoint</div>
                 </div>
             </div>
             <div class="skills-group">
                 <div class="skills-group-title">Python Concepts</div>
                 <div class="skills-grid">
-                    <div class="skill-chip">OOPs</div>
-                    <div class="skill-chip">Exception Handling</div>
-                    <div class="skill-chip">File Handling</div>
-                    <div class="skill-chip">Functions &amp; Modules</div>
-                    <div class="skill-chip">Data Structures</div>
+                    <div class="skill-chip">🧬 OOPs</div>
+                    <div class="skill-chip">🛡️ Exception Handling</div>
+                    <div class="skill-chip">📁 File Handling</div>
+                    <div class="skill-chip">🔧 Functions &amp; Modules</div>
+                    <div class="skill-chip">📚 Data Structures</div>
                 </div>
             </div>
         </div>
@@ -1020,6 +1021,7 @@
 
                 <a href="https://gajulabeulah.github.io/E-Gardening-Fnial-Project/" target="_blank"
                     class="project-card">
+                    <img src="https://via.placeholder.com/400x250/8a2be2/e8e8f0?text=E-Marketing+Platform" alt="E-Marketing Platform Screenshot" style="width:100%; height:150px; object-fit:cover; border-radius:8px; margin-bottom:1rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
                     <div class="proj-num">01</div>
                     <div class="proj-title">E-Marketing&Services</div>
                     <p class="proj-desc">Developed an e-marketing platform focused on connecting people with plants
